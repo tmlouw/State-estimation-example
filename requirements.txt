@@ -1,0 +1,22 @@
+# Environment for Leaching-DataGen.ipynb and TimesFM3-Leaching-Forecast.ipynb (Windows)
+#
+# Setup:
+#   python -m venv venv
+#   venv\Scripts\activate
+#   pip install -r requirements.txt
+#
+# If you have an NVIDIA GPU and want CUDA acceleration, install torch first from:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu129
+# then run the pip install -r command above (it will skip torch since it's already installed).
+
+numpy>=2.3,<3
+pandas>=2.3.3,<3
+scipy>=1.17
+matplotlib>=3.11
+h5py>=3.16
+
+torch>=2.14
+timesfm[torch]>=3.0        # provides the `timesfm3` package used by TimesFM3-Leaching-Forecast.ipynb
+
+jupyterlab>=4.6
+ipykernel>=7.3
